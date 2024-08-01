@@ -24,7 +24,7 @@ export default function View() {
 
   const handleSearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setSearchQuery(event.target.value);
-    setCurrentPage(1); // Reset to the first page on search
+    setCurrentPage(1); 
   };
 
  const filteredBooks = books.filter(book =>

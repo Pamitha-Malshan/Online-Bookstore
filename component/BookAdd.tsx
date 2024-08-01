@@ -25,9 +25,9 @@ export default function BookAdd() {
 
   const onSubmit = (data: FormValues) => {
     addBook(data);
-    reset();  // Reset form after submission
+    reset();  
     setShowSuccessMessage(true);
-    setTimeout(() => setShowSuccessMessage(false), 3000); // Hide success message after 3 seconds
+    setTimeout(() => setShowSuccessMessage(false), 3000); 
     console.log('Form submitted:', data);
   };
 
