@@ -83,3 +83,7 @@ font-family: "Lexend SemiBold";
   background-size: cover;
   width: 100%;
 }
+
+.active{
+  color: rgb(45, 57, 236) !important;
+}

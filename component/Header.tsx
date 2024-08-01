@@ -3,7 +3,12 @@ import React from 'react'
 import Link from 'next/link'
 import MobileHeader from './MobileHeader'
 
+import { usePathname } from "next/navigation";
+
 export default function Header() {
+
+  const currentRoute = usePathname();
+  
   return (
     <div>
       <div className='hidden md:contents'>
@@ -11,19 +16,19 @@ export default function Header() {
 
         <div className='flex gap-20'>
             <Link href="/">
-            <p className='Lexend-Medium text-[1.1rem] hover:text-[#384994] uppercase'>Home</p>
+            <p className={currentRoute === "/" ? "active Lexend-Medium text-[1.1rem] hover:text-[#384994] uppercase " : "Lexend-Medium text-[1.1rem] hover:text-[#384994] uppercase "}>Home</p>
             </Link>
 
             <Link href="Addbook">
-            <p className='Lexend-Medium text-[1.1rem] hover:text-[#384994] uppercase'>Add Book</p>
+            <p className={currentRoute === "/Addbook" ? "active Lexend-Medium text-[1.1rem] hover:text-[#384994] uppercase " : "Lexend-Medium text-[1.1rem] hover:text-[#384994] uppercase "}>Add Book</p>
             </Link>
 
             <Link href="Viewbook">
-            <p className='Lexend-Medium text-[1.1rem] hover:text-[#384994] uppercase'>View Book</p>
+            <p className={currentRoute === "/Viewbook" ? "active Lexend-Medium text-[1.1rem] hover:text-[#384994] uppercase " : "Lexend-Medium text-[1.1rem] hover:text-[#384994] uppercase "}>View Book</p>
             </Link>
 
             <Link href="Shoppingcart">
-            <p className='Lexend-Medium text-[1.1rem] hover:text-[#384994] uppercase'>My Cart</p>
+            <p className={currentRoute === "/Shoppingcart" ? "active Lexend-Medium text-[1.1rem] hover:text-[#384994] uppercase " : "Lexend-Medium text-[1.1rem] hover:text-[#384994] uppercase "}>My Cart</p>
             </Link>
         </div>   
     </div>

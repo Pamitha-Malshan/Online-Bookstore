@@ -39,7 +39,7 @@ export default function BookAdd() {
           'bright-pink': ['#F0BBDD', '#ED9BCF', '#EC7CC3', '#ED5DB8', '#F13EAF', '#F71FA7', '#FF00A1', '#E00890', '#C50E82', '#AD1374'],
         },
       }}>
-      <div className='flex justify-center items-center md:h-[85vh] my-12 md:my-0'>
+      <div className='flex justify-center items-center md:h-[85vh] pt-28 pb-12 md:py-0 md:my-0'>
         <div className='w-[90%] md:w-[32rem] border-2 border-[#9c9797] p-6 rounded-md'>
           <h1 className='Lexend-Medium text-[1.4rem] md:text-[2rem] uppercase text-center'>Add Book Details</h1>
           <form onSubmit={handleSubmit(onSubmit)}>

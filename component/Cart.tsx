@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import Link from "next/link";
 import { Button, NumberInput, MantineProvider } from "@mantine/core";
 import Image from "next/image";
 import { useBookStore } from "../stores/book";
@@ -52,13 +53,18 @@ export default function Cart() {
       }}
     >
       <div className="container mx-auto">
-        <div className="my-10">
+        <div className="pb-10 pt-20 md:py-0 md:my-10">
           <h2 className="text-center text-[3rem] Lexend-SemiBold uppercase mb-5 md:mb-10">
             My Cart
           </h2>
 
-          <div className="flex justify-end mb-8">
+          <div className="flex justify-end mb-4">
             <p className="Lexend-Medium text-[1.1rem] md:text-[1.6rem]">Total Price : {totalPrice}/=</p>
+          </div>
+          <div className="flex justify-end mb-8">
+          <Link href="/Shipping">
+            <Button>Checkout</Button>
+            </Link>
           </div>
           <div className="block lg:flex flex-wrap justify-center gap-y-10 gap-x-4 xl:gap-x-10">
             {cart.map((item) => (

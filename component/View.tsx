@@ -71,7 +71,7 @@ export default function View() {
         },
       }}>
     <div className='container mx-auto'>
-      <h2 className='text-center text-[3rem] my-10 Lexend-SemiBold'>Stored Books</h2>
+      <h2 className='text-center text-[3rem] pt-20 pb-10 md:py-0 md:my-10 Lexend-SemiBold'>Stored Books</h2>
 
       <div className='flex justify-center mb-10'>
         <TextInput

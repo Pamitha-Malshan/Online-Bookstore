@@ -1,3 +1,6 @@
+# Hosted URL
+https://online-bookstore-ten.vercel.app/
+
 # Bookstore Application
 
 This project is a responsive web application that allows users to browse, search, and purchase books. The application is built using Next.js, React.js, TypeScript, Mantine UI, Zod for form validation, and Zustand for state management.
@@ -30,3 +33,6 @@ npm run dev
 - Navigate to the "Cart" page to view your cart items.
 - You can update the quantity of each item or remove items from the cart.
 - The total price of the cart items will be displayed at the top of the cart page.
+
+# Adding shipping details
+- Fill in the shipping details.
