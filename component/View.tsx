@@ -1,7 +1,7 @@
 
 "use client";
 import React, { useState } from 'react';
-import { TextInput, Button, Container, NumberInput, MantineProvider } from '@mantine/core';
+import { TextInput, Button, Container, NumberInput, MantineProvider,Notification } from '@mantine/core';
 import Image from 'next/image';
 import { useBookStore } from '../stores/book';
 import '@mantine/core/styles.css';
@@ -20,7 +20,10 @@ export default function View() {
   const [currentPage, setCurrentPage] = useState(1);
   const [selectedBook, setSelectedBook] = useState<Book | null>(null);
   const [quantity, setQuantity] = useState(1);
+  const [showSuccessMessage, setShowSuccessMessage] = useState(false);
   const booksPerPage = 6;
+
+    console.log(selectedBook)
 
   const handleSearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setSearchQuery(event.target.value);
@@ -58,8 +61,15 @@ export default function View() {
     if (selectedBook) {
       addToCart({ ...selectedBook, quantity });
       setSelectedBook(null);
+      setShowSuccessMessage(true);
+      setTimeout(() => setShowSuccessMessage(false), 3000); 
       setQuantity(1);
     }
+  };
+
+  const handleConfirmClose = () => {
+      setSelectedBook(null);
+     
   };
 
   return (
@@ -72,6 +82,16 @@ export default function View() {
       }}>
     <div className='container mx-auto'>
       <h2 className='text-center text-[3rem] pt-20 pb-10 md:py-0 md:my-10 Lexend-SemiBold'>Stored Books</h2>
+
+      {showSuccessMessage && (
+        <div className='flex justify-center mb-3'>
+            <div className="mt-4 w-[60%]">
+              <Notification title="Success" color="green" onClose={() => setShowSuccessMessage(false)}>
+                Book add to cart successfully!
+              </Notification>
+            </div>
+            </div>
+          )}
 
       <div className='flex justify-center mb-10'>
         <TextInput
@@ -132,9 +152,22 @@ export default function View() {
       {selectedBook && (
         <div className='fixed bottom-0 left-0 w-full bg-white p-4 shadow-lg h-[100vh] items-center justify-center flex' >
           <div>
-          <h3 className='text-center text-[2rem] Lexend-SemiBold'>Add to Cart</h3>
+          
           <div className='flex justify-center w-[20rem] md:w-[30rem]'>
+            
             <div className='md:w-[100%] w-full bg-[#f5f5f5] rounded-lg p-5'>
+              <div className='flex justify-end'>
+            <button onClick={handleConfirmClose}>
+            <Image
+                src="/Images/cut.png"
+                width={40}
+                height={40}
+                sizes="100vw"
+                alt="close"
+              />
+            </button>
+            </div>
+            <h3 className='text-center text-[2rem] Lexend-SemiBold'>Add to Cart</h3>
               <Image
                 src="/Images/book.png"
                 className="w-10/12 mx-auto"
@@ -148,8 +181,9 @@ export default function View() {
               <p><span className='Lexend-Medium'>Category of Book :</span> {selectedBook.category}</p>
               <p><span className='Lexend-Medium'>Price :</span><span className='text-[#b62fa4]'> {selectedBook.price}/=</span></p>
             
+              <p className='Lexend-Medium'>Quantity :</p>
               <NumberInput
-                    label="Quantity"
+                    label=""
                     value={quantity}
                     onChange={(value) => {
                       if (typeof value === 'number') {

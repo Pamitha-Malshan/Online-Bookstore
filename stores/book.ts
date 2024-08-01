@@ -1,36 +1,3 @@
-// import create, { StateCreator } from 'zustand';
-// import { persist, PersistOptions } from 'zustand/middleware';
-
-// interface Book {
-//   id: number;
-//   bookname: string;
-//   author: string;
-//   price: number;
-//   bookimage: string;  // URL of the image
-//   category: string;
-// }
-
-// interface BookState {
-//   books: Book[];
-//   addBook: (book: Omit<Book, 'id'>) => void;
-// }
-
-// type MyPersist = (config: StateCreator<BookState>, options: PersistOptions<BookState>) => StateCreator<BookState>;
-
-// export const useBookStore = create<BookState>(
-//   (persist as MyPersist)(
-//     (set) => ({
-//       books: [],
-//       addBook: (book) =>
-//         set((state) => ({
-//           books: [...state.books, { ...book, id: state.books.length + 1 }],
-//         })),
-//     }),
-//     {
-//       name: 'book-store', // unique name in storage
-//     }
-//   )
-// );
 
 import create, { StateCreator } from 'zustand';
 import { persist, PersistOptions } from 'zustand/middleware';
