@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { MantineProvider } from '@mantine/core';
 import { Inter } from "next/font/google";
 import "./globals.css";
 
@@ -16,7 +17,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <MantineProvider>
       <body className={inter.className}>{children}</body>
+      </MantineProvider>
     </html>
   );
 }

@@ -1,9 +1,11 @@
 import Image from "next/image";
+import Landingpage from "./Landingpage/page";
+import { MantineProvider } from '@mantine/core';
 
 export default function Home() {
   return (
-   <div>
-    <h1 className="text-[red] text-[3rem]">Pamitha malshan</h1>
-   </div>
+   <MantineProvider>
+      <Landingpage/>
+   </MantineProvider>
   );
 }

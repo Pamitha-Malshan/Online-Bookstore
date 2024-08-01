@@ -1,36 +1,32 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Bookstore Application
 
-## Getting Started
+This project is a responsive web application that allows users to browse, search, and purchase books. The application is built using Next.js, React.js, TypeScript, Mantine UI, Zod for form validation, and Zustand for state management.
 
-First, run the development server:
+# Running the Development Server
 
-```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+# Project Structure
+/component: Contains reusable UI components.
+/src/app: Contains Next.js pages.
+/stores: Contains Zustand store for state management.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## Learn More
+# Usage Guide
 
-To learn more about Next.js, take a look at the following resources:
+# Adding a Book
+- Navigate to the "Add Book" page.
+- Fill in the book details, including book name, author, price, and category.
+- Click the "Submit" button.
+- A success message will be displayed upon successful submission, and the book will be added to the bookstore.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# Searching for Books
+- Use the search bar on the main page to search for books by name or category.
+- The book list will be filtered based on your search query.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+# Viewing and Managing the Cart
+- Click on the "Add to Cart" button on any book card to add the book to your cart.
+- Navigate to the "Cart" page to view your cart items.
+- You can update the quantity of each item or remove items from the cart.
+- The total price of the cart items will be displayed at the top of the cart page.

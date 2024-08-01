@@ -22,3 +22,64 @@
     text-wrap: balance;
   }
 }
+
+@font-face {
+  font-family: "Lexend";
+  src: url("https://db.onlinewebfonts.com/t/42dbf00de1681d38477679d3eadad56a.eot");
+  src: url("https://db.onlinewebfonts.com/t/42dbf00de1681d38477679d3eadad56a.eot?#iefix")format("embedded-opentype"),
+  url("https://db.onlinewebfonts.com/t/42dbf00de1681d38477679d3eadad56a.woff2")format("woff2"),
+  url("https://db.onlinewebfonts.com/t/42dbf00de1681d38477679d3eadad56a.woff")format("woff"),
+  url("https://db.onlinewebfonts.com/t/42dbf00de1681d38477679d3eadad56a.ttf")format("truetype"),
+  url("https://db.onlinewebfonts.com/t/42dbf00de1681d38477679d3eadad56a.svg#Lexend")format("svg");
+}
+
+@font-face {
+  font-family: "Lexend Medium";
+  src: url("https://db.onlinewebfonts.com/t/4e9a39f60cd3fbae96889bc7f03013f4.eot");
+  src: url("https://db.onlinewebfonts.com/t/4e9a39f60cd3fbae96889bc7f03013f4.eot?#iefix")format("embedded-opentype"),
+  url("https://db.onlinewebfonts.com/t/4e9a39f60cd3fbae96889bc7f03013f4.woff2")format("woff2"),
+  url("https://db.onlinewebfonts.com/t/4e9a39f60cd3fbae96889bc7f03013f4.woff")format("woff"),
+  url("https://db.onlinewebfonts.com/t/4e9a39f60cd3fbae96889bc7f03013f4.ttf")format("truetype"),
+  url("https://db.onlinewebfonts.com/t/4e9a39f60cd3fbae96889bc7f03013f4.svg#Lexend Medium")format("svg");
+}
+
+@font-face {
+  font-family: "Lexend SemiBold";
+  src: url("https://db.onlinewebfonts.com/t/3474c885518969e3f7178ad88f489c78.eot");
+  src: url("https://db.onlinewebfonts.com/t/3474c885518969e3f7178ad88f489c78.eot?#iefix")format("embedded-opentype"),
+  url("https://db.onlinewebfonts.com/t/3474c885518969e3f7178ad88f489c78.woff2")format("woff2"),
+  url("https://db.onlinewebfonts.com/t/3474c885518969e3f7178ad88f489c78.woff")format("woff"),
+  url("https://db.onlinewebfonts.com/t/3474c885518969e3f7178ad88f489c78.ttf")format("truetype"),
+  url("https://db.onlinewebfonts.com/t/3474c885518969e3f7178ad88f489c78.svg#Lexend SemiBold")format("svg");
+}
+
+.Lexend{
+font-family: "Lexend";
+}
+.Lexend-Medium{
+font-family: "Lexend Medium";
+}
+.Lexend-SemiBold{
+font-family: "Lexend SemiBold";
+}
+
+@media (max-width: 900px) {
+ .container{
+  width: 94% !important;
+ }
+}
+
+@media (max-width: 1200px) {
+  .container{
+   width: 96% !important;
+  }
+ }
+
+
+.langing-bg{
+  background-image: url("/Images/landingbg.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+}
